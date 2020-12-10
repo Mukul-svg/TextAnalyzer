@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS is used from Bootstap-->
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Text Analyser</title>
+  </head>
+  <body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">TextAnalyser.in</a>
+      <a class="navbar-brand" href="https://github.com/Mukul-svg">Contact</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Welcome!</strong> This website is made by Mukul Raghav for Text analyzing.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="container">
+    <form action='/analyse' method='post'>{% csrf_token %}
+    <h2><label for="exampleFormControlTextarea1" class="form-label">Enter Your Text Here to Analyze :-</label></h2>
+  <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="10"></textarea>
+    <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="removepunc" id="flexSwitchCheckDefault1">
+  <label class="form-check-label" for="flexSwitchCheckDefault1">Remove Punctuations</label>
+    </div>
+        <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="fullcaps" id="flexSwitchCheckDefault2">
+  <label class="form-check-label" for="flexSwitchCheckDefault2">Capitaize Text</label>
+    </div>
+        <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="newlineremover" id="flexSwitchCheckDefault3">
+  <label class="form-check-label" for="flexSwitchCheckDefault3">New Line Remover</label>
+    </div>
+        <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="extraspaceremover" id="flexSwitchCheckDefault4">
+  <label class="form-check-label" for="flexSwitchCheckDefault4">Extra Space Remover</label>
+    </div>
+        <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" name="charcount" id="flexSwitchCheckDefault5">
+  <label class="form-check-label" for="flexSwitchCheckDefault5">Count Characters</label>
+    </div>
+    <button type="submit" class="btn btn-dark mt-2">Analyze Text</button>
+</div>
+  </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  </body>
+</html>

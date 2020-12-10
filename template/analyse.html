@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <style>
+        h4 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        pre {text-align: center;}
+      </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Text Analyser</title>
+  </head>
+  <body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand">TextAnalyser.in</a>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Your text has been Analysed!</strong> Thank you for using our website.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+  <h4>Analysed Text - {{ purpose }}</h4>
+<p>
+<pre>{{ analysed_text }}</pre>
+</p>
+  </body>
+</html>
